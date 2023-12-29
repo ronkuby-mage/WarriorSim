@@ -811,6 +811,7 @@ class Player {
     rollweapon(weapon) {
         let tmp = 0;
         let roll = rng10k();
+        console.log("Hello world!");
         tmp += Math.max(this.nextswinghs ? weapon.miss : weapon.dwmiss, 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         tmp += weapon.dodge * 100;
