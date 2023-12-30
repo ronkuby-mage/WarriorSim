@@ -22,14 +22,14 @@ gulp.task("js-build", function () {
         //     start_comment: "start-log",
         //     end_comment: "end-log"
         //   }))
-        .pipe(
-            minify({
-                noSource: true,
-                ext: {
-                    min: ".min.js",
-                },
-            })
-        )
+        // .pipe(
+        //     minify({
+        //         noSource: true,
+        //         ext: {
+        //             min: ".min.js",
+        //         },
+        //     })
+        // )
         .pipe(gulp.dest("dist/js"));
 });
 
