@@ -722,6 +722,8 @@ void Player::endauras()
 Result Player::rollweapon( Weapon& weapon )
 {
     int roll = rng10k();
+
+    std::cout << simulation.step << " OH attack " << nextswinghs << std::endl;    
     roll -= std::max( nextswinghs ? weapon.miss : weapon.dwmiss, 0 );
     if ( roll < 0 ) return RESULT_MISS;
     roll -= weapon.dodge;
